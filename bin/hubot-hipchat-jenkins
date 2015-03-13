@@ -1,0 +1,17 @@
+#!/bin/sh
+
+set -e
+
+if [ -f ${HOME}/.hubotrc ]; then
+  . ${HOME}/.hubotrc
+fi
+
+# export HUBOT_HIPCHAT_JID="********@chat.hipchat.com"
+# export HUBOT_HIPCHAT_PASSWORD="********"
+# export HUBOT_LOG_LEVEL="debug"
+export HUBOT_JENKINS_URL="${HUBOT_JENKINS_URL:-"http://127.0.0.1:8080/"}"
+
+npm install
+export PATH="node_modules/.bin:node_modules/hubot/node_modules/.bin:$PATH"
+
+exec node_modules/.bin/hubot --name "hubot" -a hipchat "$@"
