@@ -17,4 +17,4 @@ cd $(dirname $0)/../
 npm install
 export PATH="node_modules/.bin:node_modules/hubot/node_modules/.bin:$PATH"
 
-exec node_modules/.bin/hubot --name "hubot" -a hipchat "$@"
+exec node_modules/.bin/hubot --name "hubot" -a hipchat "$@" >> ${HOME}/hubot.log
