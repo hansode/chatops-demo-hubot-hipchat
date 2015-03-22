@@ -11,6 +11,9 @@ fi
 # export HUBOT_LOG_LEVEL="debug"
 export HUBOT_JENKINS_URL="${HUBOT_JENKINS_URL:-"http://127.0.0.1:8080/"}"
 
+# make sure to change directory.
+cd $(dirname $0)/../
+
 npm install
 export PATH="node_modules/.bin:node_modules/hubot/node_modules/.bin:$PATH"
 
