@@ -29,6 +29,12 @@ Run hubot.
 $ ./bin/hubot-hipchat-jenkins
 ```
 
+References
+----------
+
++ [HipChat](https://www.hipchat.com/)
++ [HUBOT](https://hubot.github.com/)
+
 Contributing
 ------------
 
