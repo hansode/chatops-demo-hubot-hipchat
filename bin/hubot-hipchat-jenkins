@@ -6,6 +6,10 @@ if [ -f ${HOME}/.hubotrc ]; then
   . ${HOME}/.hubotrc
 fi
 
+if [ -f /etc/default/hubot ]; then
+  . /etc/default/hubot
+fi
+
 # export HUBOT_HIPCHAT_JID="********@chat.hipchat.com"
 # export HUBOT_HIPCHAT_PASSWORD="********"
 # export HUBOT_LOG_LEVEL="debug"
